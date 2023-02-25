@@ -1,0 +1,16 @@
+.card-imgs {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+#chatField {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chatMsg {
+    border: solid #000 2px;
+}

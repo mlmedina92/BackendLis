@@ -1,0 +1,25 @@
+{{#if prods.length}}
+<div class="row row-cols-1 row-cols-md-2 g-3">
+    {{#each prods}}
+    <div class="col-6 col-md-3">
+        <div class="card">
+            <div class="card-imgs">
+                {{#each thumbnails}}
+                <img src="{{this}}" class="img-fluid w-100" alt="{{title}}" />
+                {{/each}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+                <p class="card-text"><small>{{category}}</small></p>
+                <p class="card-text">{{description}}</p>
+                <div class="card-footer">
+                    <p class="card-text"><strong>$ {{price}}</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{else}}
+<h2>No hay productos</h2>
+{{/if}}

@@ -1,0 +1,72 @@
+[
+    {
+        "id": 0,
+        "title": "jabon ala",
+        "description": "jabon ala",
+        "code": "jabon-ala",
+        "price": 1,
+        "status": true,
+        "stock": 8,
+        "category": "productos1",
+        "thumbnails": [
+            "https://definicion.de/wp-content/uploads/2009/06/producto.png",
+            "https://definicion.de/wp-content/uploads/2009/06/producto.png"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "jabon en pan",
+        "description": "jabon pan",
+        "code": "jabon-pan",
+        "price": 10,
+        "status": true,
+        "stock": 8,
+        "category": "productos1",
+        "thumbnails": [
+            "https://definicion.de/wp-content/uploads/2009/06/producto.png",
+            "https://definicion.de/wp-content/uploads/2009/06/producto.png"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "jabon liquido",
+        "description": "jabon liquido",
+        "code": "jabon-liquido",
+        "price": 1,
+        "status": true,
+        "stock": 8,
+        "category": "productos1",
+        "thumbnails": [
+            "https://definicion.de/wp-content/uploads/2009/06/producto.png",
+            "https://definicion.de/wp-content/uploads/2009/06/producto.png"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "shampoo",
+        "description": "shampoo dove",
+        "code": "shampoo-dove",
+        "price": 1,
+        "status": true,
+        "stock": 8,
+        "category": "productos2",
+        "thumbnails": [
+            "https://definicion.de/wp-content/uploads/2009/06/producto.png",
+            "https://definicion.de/wp-content/uploads/2009/06/producto.png"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "acondicionador",
+        "description": "acondicionador dove",
+        "code": "acondicionador-dove",
+        "price": 1,
+        "status": true,
+        "stock": 8,
+        "category": "productos2",
+        "thumbnails": [
+            "https://definicion.de/wp-content/uploads/2009/06/producto.png",
+            "https://definicion.de/wp-content/uploads/2009/06/producto.png"
+        ]
+    }
+]

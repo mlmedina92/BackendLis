@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecomerce</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Bienvenidos</h1>
+        {{!-- Incrusta VISTAS en este LAYOUT --}}
+        {{{body}}}
+    </main>
+
+    <footer>
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <ul class="list-unstyled mb-2">
+                        <li class="nav-item"><a class="nav-link fs-6 pb-3 pb-md-1" href="/index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fs-6 pb-3 pb-md-1" href="./nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fs-6 pb-3 pb-md-1" href="./galeria.html">Galería</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fs-6 pb-3 pb-md-1" href="./servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fs-6 pb-3 pb-md-1" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 contact">
+                    <ul class="list-unstyled">
+                        <li class="nav-item">
+                            <p class="fw-bold fs-6">Administración:</p>
+                            <a class="nav-link" href="tel:2494026594" title="Administración">
+                                <i class="fab fa-whatsapp"></i>
+                                <p class="fs-6 mb-3 mb-md-0">2494026594</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <p class="fw-bold fs-6">Servicios:</p>
+                            <a class="nav-link" href="tel:2494496102" title="Servicios">
+                                <i class="fab fa-whatsapp"></i>
+                                <p class="fs-6 mb-3 mb-md-0">2494496102</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://goo.gl/maps/EXswAuif3Q6bjLet6">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p class="fs-6">Rosalía de Castro 1272</p>
+                                <p class="fs-6">Tandil (7000), Buenos Aires, Arg.</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 mb-4 socials text-md-end text-center">
+                    <ul class="list-unstyled d-inline-flex">
+                        <li class="nav-item me-4">
+                            <a class="nav-link" target="_blank" href="https://www.facebook.com/tatoyjose.medina"
+                                title="Facebook">
+                                <i class="fab fa-facebook-square icono-footer"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" target="_blank" href="https://www.instagram.com/tatomedinaservicios"
+                                title="Instagram">
+                                <i class="fab fa-instagram icono-footer"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" target="_blank" href="mailto:tatomedinaservicioselectricos@hotmail.com"
+                                title="E-mail">
+                                <i class="fas fa-envelope icono-footer"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
