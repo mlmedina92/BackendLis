@@ -10,39 +10,40 @@ import { Server } from "socket.io";
 import MessageManager from "./dao/mongoManager/MessageManager.js"; // TODO meter la clase en chat.router.js
 import "./dao/dbConfig.js";
 
-// import DBConfig:
-
+//Creacion del servidor
 const app = express();
 const PORT = 3000;
 
-console.log(__dirname); //me brinda el path exacto p acceder a carpeta PUBLIC
+console.log(__dirname); //Brinda el path exacto para acceder a la carpeta PUBLIC
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 
 // Configurar handlebars
-app.engine("handlebars", handlebars.engine()); //solo para handlebars. Importo hanldebars
-app.set("views", __dirname + "/views"); //ubicacion de carpeta vistas
-app.set("view engine", "handlebars"); //cual motor de plantilla uso
+app.engine("handlebars", handlebars.engine()); //solo para handlebars.
+app.set("views", __dirname + "/views"); //Ubicación de carpeta vistas
+app.set("view engine", "handlebars"); //Qué motor de plantilla uso
 
 // rutas
-
-app.use("/api/products", producstRouter);
+app.use("/api/products", producstRouter); //cdo llamo a ruta /api/products renderiza productsRouter
 app.use("/api/carts", cartsRouter);
-
 app.use("/", homeRouter);
 app.use("/realTimeProducts", realTimeProductsRouter);
 app.use('/chat', chatRouter)
 
+
+//El servidor escucha al puerto
 const httpServer = app.listen(PORT, () => {
   console.log(`Escuchando al puerto ${PORT}`);
 });
 
+//servidor socketServer
 const socketServer = new Server(httpServer);
 
 const mm = new MessageManager(); // TODO
 
+//Emicion de eventos para el chat
 socketServer.on("connection", (socket) => {
   socket.on("show", async () => {
     const getAll = await mm.getMsgs();

@@ -7,6 +7,6 @@ mongoose.connect(URI, (error) => {
     if (error) {
         console.log(error);
     } else {
-        console.log('conectado con exito a la b de datos');
+        console.log('Conectado con éxito a la base de datos de MongoDB');
     }
 })

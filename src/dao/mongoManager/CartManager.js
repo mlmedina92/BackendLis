@@ -28,16 +28,16 @@ export default class CartManager {
 
   async addToCart(cid, pid, quantity) {
     try {
-      const getId = await cartsModel.findById(cid);
-      
-      // me fijo si el carrito esta creado
-      if (!!getId) {
+      const cart = await cartsModel.findById(cid);
 
-        const getProd = getId.products.find(e => e.productId === pid)
+      // me fijo si el carrito esta creado
+      if (!!cart) {
+
+        const prod = cart.products.find(e => e.productId === pid)
 
         // despues me fijo que el producto ya exista en el carrito
-        if (!!getProd) {
-          const update = getId.products.map(prod => {
+        if (!!prod) {
+          const update = cart.products.map(prod => {
             if (prod.productId == pid) {
               prod.quantity += quantity
             }
@@ -52,10 +52,25 @@ export default class CartManager {
           return addProd
         }
       } else {
-        return { error: "carrito no encontrado" };
+        return { error: "Carrito no encontrado" };
       }
     } catch (err) {
       console.log(err);
     }
   }
+
+  // async deleteFromCart(cid, pid) {
+  //   try {
+  //     const cart = await cartsModel.findById(cid);
+
+  //     // me fijo si el carrito esta creado
+  //     if (!!cart) {
+  //       cart.products.deleteOne(pid)
+
+  //     }
+
+  //   } catch (error) {
+  //     console.log(err);
+  //   }
+  // }
 }

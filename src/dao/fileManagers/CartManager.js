@@ -1,7 +1,7 @@
 import fs from 'fs'
 
 export default class CartManager {
-    constructor(path) { //cdo alguien creee una instancia, un objeto, tiene q pasar la ruta de donde se va a guardar esa inf que nos envien
+    constructor(path) { //Cdo alguien cree una instancia, un objeto tiene que pasar la ruta de donde se va a guardar esa inf. que nos envien
         this.path = path
         this.carts = []
     }
@@ -9,20 +9,20 @@ export default class CartManager {
     async saveFile() {
         //Guardo o sobreescribo el archivo
         await fs.promises.writeFile(this.path, JSON.stringify(this.carts, null, 2), 'utf-8')
-        console.log(this.path, ' guardado con exito')
+            console.log(this.path,  'Guardado con éxito')
     }
 
     async readFile() {
         // Leer la inf del archivo 
         try {
             if (!fs.existsSync(this.path)) {
-                console.log('Error: archivo no encontrado', this.path);
+                console.log('Error: Archivo no encontrado', this.path);
                 return false;
             }
 
             const data = await fs.promises.readFile(this.path, 'utf-8')
-            this.carts = JSON.parse(data) //la data que trae la prom la guardo en mi obj 
-            console.log(this.path, ' leido con exito')
+            this.carts = JSON.parse(data) //la data que trae la promesa la guardo en mi obj
+            console.log(this.path, ' Leido con exito')
             return this.carts
         } catch (error) {
             console.log('Error: ', error)
@@ -33,14 +33,14 @@ export default class CartManager {
 
     async createCart() {
         // api/carts
-        await this.readFile() //retorna el arreglo de prods
+        await this.readFile() //Retorna el arreglo de prods
 
         const newCart = {
             "id": this.carts.length,
             "products": []
         }
 
-        this.carts.push(newCart)//carts es el arreglo de carritos
+        this.carts.push(newCart)//Carts es el arreglo de carritos
 
         this.saveFile()
 
@@ -54,7 +54,7 @@ export default class CartManager {
         const cart = this.carts.find((cart) => cart.id === id)
 
         if (!cart) {//si no lo encuentra
-            console.log('el carrito ' + id + ' no se encontró')
+            console.log('El carrito ' + id + ' no se encontró')
             return false
         }
 
@@ -70,9 +70,9 @@ export default class CartManager {
 
         const prodInCart = cart.products.find((prodInCart) => prodInCart.productId === pid)
 
-        if (prodInCart) {//si existe el producto
+        if (prodInCart) {//Si existe el producto
             prodInCart.quantity += quantity
-        } else {//si no lo agrega
+        } else {//Si no lo agrega
             cart.products.push({
                 "productId": pid,
                 "quantity": quantity

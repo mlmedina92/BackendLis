@@ -1,10 +1,10 @@
-//en este archivo creamos la clase que tiene todas las funcioanlidades de como crear un us, como eliminarlo, esta inf se va a guardar en archivos objetos , ACA DEFINIMOS TODA LA FUNCIONALIDAD
+//Creamos la clase que tiene todas las funcionalidades:crear un us,eliminarlo. Esta inf se va a guardar en archivos objetos , ACA DEFINIMOS TODA LA FUNCIONALIDAD
 
 import fs from 'fs' // para poder trabajar con archivos
 
 //creo la clase
 export default class ProductManager {
-    constructor(path) { //cdo alguien creee una instancia, un objeto, tiene q pasar la ruta de donde se va a guardar esa inf que nos envien
+    constructor(path) { //cdo alguien creee una instancia un objeto, tiene q pasar la ruta de donde se va a guardar esa inf que nos envien
         this.path = path
         this.products = [];
 
@@ -12,7 +12,7 @@ export default class ProductManager {
     async saveFile() {
         //Guardo o sobreescribo el archivo q guarda los productos
         await fs.promises.writeFile(this.path, JSON.stringify(this.products, null, 2), 'utf-8')
-        console.log(this.path, ' guardado con exito')
+        console.log(this.path, ' Guardado con éxito')
     }
 
     async readFile() {
@@ -25,7 +25,7 @@ export default class ProductManager {
 
             const data = await fs.promises.readFile(this.path, 'utf-8')
             this.products = JSON.parse(data) //la data que trae la prom la guardo en mi obj 
-            console.log(this.path, ' leido con exito')
+            console.log(this.path, ' leído con éxito')
             return this.products
         } catch (error) {
             console.log('Error: ', error)

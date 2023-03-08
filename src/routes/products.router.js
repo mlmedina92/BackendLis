@@ -21,8 +21,8 @@ const pm = new ProductManager()
 //  Creo las distintas rutas:
 //Ruta para buscar todos los productos:
 router.get('/', async (req, res) => {//aca te llega inf por QUERY
-    const prods = await pm.getProducts(req.query)//lo que este desp del ? es query. se pueden concatenar con & . http://localhost:8080/products?limit=2
-    res.json({ prods })// te envia la rta con los productos dentro de un objeto 
+    const resp = await pm.getProducts(req.query)//lo que este desp del ? es query. se pueden concatenar con & . http://localhost:8080/products?limit=2
+    res.json(resp)// te envia la rta con los productos dentro de un objeto 
 })
 
 
@@ -59,9 +59,9 @@ router.post('/', async (req, res) => {
 router.put('/', async (req, res) => {
     const resp = pm.updateProductById(req.body)
     if (resp) {
-        res.status(200).json({ message: 'Prod actualizado con exito', prod: req.body })
+        res.status(200).json({ message: 'Prod actualizado con éxito', prod: req.body })
     } else {
-        console.log('error');
+        console.log('Error');
     }
 })
 /* ejemplo de body para llamar al put
@@ -84,8 +84,8 @@ router.put('/', async (req, res) => {
 router.delete('/', async (req, res) => {
     const resp = pm.removeProductById(req.body.id)//paso el id  por BODY
     if (resp) {
-        res.status(200).json({ message: 'Prod eliminado con exito', prod: req.body })
-        socketServer.emit('product-removed', `Producto ${req.body.id} eliminado con exito`)
+        res.status(200).json({ message: 'Producto eliminado con éxito', prod: req.body })
+        socketServer.emit('product-removed', `Producto ${req.body.id} eliminado con éxito`)
     } else {
         console.log('error');
     }

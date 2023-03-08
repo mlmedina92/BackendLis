@@ -1,3 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* header */
+header {
+    background-color: rgba(0, 122, 51);
+    color: whitesmoke;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-bottom: 1rem solid black;
+}
+
+header a:hover {
+    cursor: pointer;
+    cursor: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1677683944/don%20remolo/porcion-de-pizza_vhah2n.png'), auto;
+    color: #FFB84C !important;
+    transition: all 1s ease-in-out;
+}
+
+.logo {
+    border-radius: 50%;
+}
+
+
 .card-imgs {
     display: flex;
     overflow-x: scroll;
@@ -14,3 +42,66 @@
 .chatMsg {
     border: solid #000 2px;
 }
+
+/* footer */
+footer {
+    background-color: rgb(45, 131, 52);
+    color: white;
+}
+
+footer a {
+    color: white !important;
+
+}
+
+footer a:hover {
+    color: #FFB84C !important;
+    transition: all 1s ease-in-out;
+
+}
+
+.copyright-styles {
+    background-color: black;
+    color: whitesmoke;
+}
+
+.copyright-styles a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.copyright-styles a:hover {
+    text-decoration: none;
+    color: #FFB84C !important;
+    transition: all 1s ease-in-out;
+}
+
+
+
+/* MQ MOBILE INDEX */
+/* navbar */
+@media screen and (max-width: 800px) {
+    .navbar-collapse {
+        height: 100vh;
+        padding-top: 4rem;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+}
+
+
+@media screen and (max-width: 800px) {
+    .cart-icon {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+}
+
