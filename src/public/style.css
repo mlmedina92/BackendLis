@@ -5,24 +5,31 @@
     scroll-behavior: smooth;
 }
 
-/* header */
+/* --------------------HEADER------------------------- */
 header {
-    background-color: rgba(0, 122, 51);
+    background-color: #e74423;
     color: whitesmoke;
     font-size: 1.5rem;
     text-transform: uppercase;
-    border-bottom: 1rem solid black;
 }
 
 header a:hover {
     cursor: pointer;
-    cursor: url('https://res.cloudinary.com/dmatgvjjy/image/upload/v1677683944/don%20remolo/porcion-de-pizza_vhah2n.png'), auto;
-    color: #FFB84C !important;
+    color: #393333 !important;
     transition: all 1s ease-in-out;
 }
 
 .logo {
     border-radius: 50%;
+}
+
+.carrito-decompras {
+    filter: invert(90%);
+}
+
+.carrito-decompras:hover {
+    filter: invert(20%);
+    transition: all 1s ease-in-out;
 }
 
 
@@ -32,32 +39,45 @@ header a:hover {
     scroll-snap-type: x mandatory;
 }
 
-#chatField {
-    margin-top: 20px;
+.chat-real {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: initial;
+    justify-content: center;
+    padding-bottom: 2rem;
+
 }
 
 .chatMsg {
-    border: solid #000 2px;
+    display: block;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--bs-form-control-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-/* footer */
+/*----------------FOOTER---------------*/
 footer {
-    background-color: rgb(45, 131, 52);
-    color: white;
+    background-color: #e74423;
+    color: whitesmoke;
 }
 
 footer a {
-    color: white !important;
-
+    color: whitesmoke !important;
 }
 
 footer a:hover {
-    color: #FFB84C !important;
+    color: #393333 !important;
     transition: all 1s ease-in-out;
-
 }
 
 .copyright-styles {
@@ -72,10 +92,9 @@ footer a:hover {
 
 .copyright-styles a:hover {
     text-decoration: none;
-    color: #FFB84C !important;
+    color: #e74423 !important;
     transition: all 1s ease-in-out;
 }
-
 
 
 /* MQ MOBILE INDEX */
@@ -85,7 +104,6 @@ footer a:hover {
         height: 100vh;
         padding-top: 4rem;
     }
-
 }
 
 @media screen and (max-width: 800px) {
@@ -94,14 +112,4 @@ footer a:hover {
         align-items: center;
         font-size: 2rem;
     }
-
 }
-
-
-@media screen and (max-width: 800px) {
-    .cart-icon {
-        height: 3.5rem;
-        width: 3.5rem;
-    }
-}
-

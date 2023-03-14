@@ -22,10 +22,10 @@
     "status": true,
     "stock": 15,
     "category": "pizzas",
-    "thumbnails":  [
-      "https://cdn7.kiwilimon.com/recetaimagen/13534/640x426/6024.jpg.webp",
-      "https://cdn7.kiwilimon.com/recetaimagen/13534/640x426/6024.jpg.webp"
-     ]
+    "thumbnails": [
+     "https://cdn7.kiwilimon.com/recetaimagen/13534/640x426/6024.jpg.webp",
+     "https://cdn7.kiwilimon.com/recetaimagen/13534/640x426/6024.jpg.webp"
+    ]
   },
   {
     "id": 2,
@@ -45,11 +45,11 @@
     "id": 3,
     "title": "Empanada de carne",
     "description": "Una empanada rellena de carne picada, cebolla, aceitunas y huevo duro. Es muy común en Argentina y otros países de América Latina.",
-    "code": "emapanada-carne",
+    "code": "empanada-carne",
     "price": 1,
     "status": true,
     "stock": 8,
-    "category": "Empanadas",
+    "category": "empanadas",
     "thumbnails": [
       "https://sazondemama.com/wp-content/uploads/2023/01/Como-hacer-la-receta-originaria-de-empanadas-de-carne-argentinas-768x432.jpg",
       "https://sazondemama.com/wp-content/uploads/2023/01/Como-hacer-la-receta-originaria-de-empanadas-de-carne-argentinas-768x432.jpg"
@@ -59,14 +59,14 @@
     "id": 4,
     "title": "Empanada de pollo",
     "description": "Una empanada rellena de pollo desmenuzado, cebolla, pimiento, aceitunas y especias. Es popular en muchos países de habla hispana",
-    "code": "Empanada-pollo",
+    "code": "empanada-pollo",
     "price": 1,
     "status": true,
     "stock": 8,
-    "category": "Empanadas",
+    "category": "empanadas",
     "thumbnails": [
-      "https://sazondemama.com/wp-content/uploads/2023/01/Como-hacer-la-receta-originaria-de-empanadas-de-carne-argentinas-768x432.jpg",
-      "https://sazondemama.com/wp-content/uploads/2023/01/Como-hacer-la-receta-originaria-de-empanadas-de-carne-argentinas-768x432.jpg"
+      "https://definicion.de/wp-content/uploads/2009/06/producto.png",
+      "https://definicion.de/wp-content/uploads/2009/06/producto.png"
     ]
   }
 ]

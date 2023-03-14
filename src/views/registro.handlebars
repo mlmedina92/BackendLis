@@ -1,0 +1,14 @@
+<h2>Registro</h2>
+{{!-- envia al inf a /users/registro con el emtodo post --}}
+<form action="/api/users/registro" method="post">
+    firstname <input type="text" name="first_name" id="first_name">
+    lastname <input type="text" name="last_name" id="last_name">
+    email <input type="email" name="email" id="email">
+    age <input type="number" name="age" id="age">
+    password<input type="password" name="password" id="password">
+    <input type="submit" value="Crear">
+
+</form>
+{{!-- <h2>registro con Github</h2>
+
+<button onclick="location.href='/users/registroGithub'">github</button> --}}

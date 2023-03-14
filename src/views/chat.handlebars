@@ -1,23 +1,37 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Chat</title>
-  </head>
-  <body>
 
-    <form>
-      <p>Email:</p>
-      <input type="text" id="email" />
-      <p>Mensaje:</p>
-      <input type="text" id="message" />
-      <button type="submit">Enviar</button>
-    </form>
-    <section id="chatField"></section>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Chat</title>
+</head>
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/chat.js"></script>
-  </body>
+<body>
+  {{!-- TODO: scroll para mjs.ver siempre los ultimos mjs y mx height --}}
+  <div class="chat-real container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h2>Chat en tiempo real</h2>
+        <form>
+          <p>E-mail:</p>
+          <input class="form-control" type="email" id="email" name="email">
+          <p>Mensaje:</p>
+          <input class="form-control" type="text" id="message" />
+          <button type="submit" class="btn btn-primary my-3">Enviar</button>
+        </form>
+      </div>
+      <div class="col-12 col-md-6">
+        <section id="chatField">
+          {{!-- capturo el elem por su id e inserto inf en chat.js --}}
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/chat.js"></script>
+</body>
+
 </html>
