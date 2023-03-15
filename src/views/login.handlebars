@@ -1,12 +1,29 @@
-<h2>Logueate</h2>
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 mb-5">
+            <form action="/api/users/login" method="post">
+                <h2 class="mb-3">Iniciar sesión</h2>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña"
+                        required>
+                    <label for="password">Contraseña</label>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-danger btn-lg">Iniciar sesión</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
 
-<form action="/api/users/login" method="post">
-    email: <input type="email" name="email" id="email">
-    password: <input type="password" name="password" id="password">
-    <input type="submit" value="ingresar">
-</form>
+            <h2>Usuario nuevo</h2>
+            <a href='/users/registro' class="btn btn-danger btn-lg w-100">Registrate</a>
+        </div>
+    </div>
 
-<h2>usuario nuevo?</h2>
-{{!-- cdo alguien da clik llevame a tal vista /views/registro--}}
-
-<a href='/users/registro'>ir a registro</a>
+</div>

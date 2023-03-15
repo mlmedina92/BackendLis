@@ -16,19 +16,21 @@ router.post('/login', async (req, res) => { // si llamo al slash views renderio 
         req.session.password = password //creo sesion
         res.redirect('/')//redireccion a home
 
-    } 
-    res.redirect('/errorLogin')// si no exite lo lleva a otra vista
+    } else {
+
+        res.redirect('/users/errorLogin')// si no exite lo lleva a otra vista
+    }
 
 })
 
 
-router.post('/registro',async (req, res) => {//CDO UNA EPROSNA SE REGISTRA GIARDA LA INF EN BD
-        const newUser = await usersManager.createUser(req.body)
-        if (newUser) {//si se creo el us lo redirecciono al home
-            res.redirect('/')
-        } else {
-            res.redirect('/errorRegistro')// si ya exite lo lleva a otra vista
-        }
+router.post('/registro', async (req, res) => {//CDO UNA EPROSNA SE REGISTRA GIARDA LA INF EN BD
+    const newUser = await usersManager.createUser(req.body)
+    if (newUser) {//si se creo el us lo redirecciono al home
+        res.redirect('/')
+    } else {
+        res.redirect('/errorRegistro')// si ya exite lo lleva a otra vista
+    }
 })
 
 export default router 

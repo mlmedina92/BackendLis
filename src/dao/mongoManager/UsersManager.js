@@ -26,7 +26,7 @@ export default class UsersManager {
         const { email, password } = user //DE USER SACO amil y pasaword
         const usuario = await userModel.findOne({ email }) // se fija si existe un us con ese mail registradopasswordBD
         if (usuario) {//si existe un us q cumple con mail ejecuto el metodo comparePassword pasandole la passwrd q ingreso el us y la q  esta en la BD . el metodo nos da true o flase
-            const isPassword =  comparePasswords(password, usuario.password)//da true o false
+            const isPassword =  await comparePasswords(password, usuario.password)//da true o false
             if (isPassword) {//si existe
                 return usuario
             }
