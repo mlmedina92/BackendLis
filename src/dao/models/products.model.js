@@ -29,6 +29,7 @@ const productsSchema = new mongoose.Schema({
   },
   category: {
     type: String,
+    enum: ['pizzas', 'empanadas'],
     required: true,
   },
   thumbnails: {

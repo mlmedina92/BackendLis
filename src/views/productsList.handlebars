@@ -1,25 +1,28 @@
-{{#if prods.length}}
+{{#if isAdminRole}}
+<h2>Bienvenido administrador {{userName}}</h2>
+{{else}}
+<h2>Bienvenido {{userName}}</h2>
+{{/if}}
 <div class="row row-cols-1 row-cols-md-2 g-3">
     {{#each prods}}
     <div class="col-6 col-md-3">
         <div class="card">
             <div class="card-imgs">
-                {{#each thumbnails}}
-                <img src="{{this}}" class="img-fluid w-100" alt="{{title}}" />
+                {{#each this.thumbnails}}
+                <img src="{{this}}" class="img-fluid w-100" alt="{{this.title}}" />
                 {{/each}}
             </div>
             <div class="card-body">
-                <h5 class="card-title">{{title}}</h5>
-                <p class="card-text"><small>{{category}}</small></p>
-                <p class="card-text">{{description}}</p>
+                <h5 class="card-title">{{this.title}}</h5>
+                <p class="card-text"><small>{{this.category}}</small></p>
+                <p class="card-text">{{this.description}}</p>
                 <div class="card-footer">
-                    <p class="card-text"><strong>$ {{price}}</strong></p>
+                    <p class="card-text"><strong>$ {{this.price}}</strong></p>
                 </div>
             </div>
         </div>
     </div>
+    {{else}}
+    <h2>No hay productos</h2>
     {{/each}}
 </div>
-{{else}}
-<h2>No hay productos</h2>
-{{/if}}

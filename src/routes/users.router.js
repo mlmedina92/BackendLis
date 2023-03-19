@@ -5,7 +5,7 @@ const router = Router()
 
 //vistas
 router.get('/login',(req,res)=>{
-    res.render('login')
+    res.render('login')//rederiza el hanldlebars login
 })
 router.get('/registro',(req,res)=>{
     res.render('registro')

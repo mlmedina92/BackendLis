@@ -6,14 +6,14 @@ const router = Router()
 
 const usersManager = new UsersManager()// traigo las fncionalidades de Usermanager cisntanciando la clase
 
-
-
 router.post('/login', async (req, res) => { // si llamo al slash views renderio formualrio
     const { email, password } = req.body
     const user = await usersManager.loginUser(req.body)
     if (user) { //si el us existe ccreo esas sesiones
         req.session.email = email //creo sesion
         req.session.password = password //creo sesion
+        req.session.userName = user.first_name
+        req.session.role = user.role
         res.redirect('/')//redireccion a home
 
     } else {
