@@ -13,6 +13,8 @@ import { Server } from "socket.io";
 import MessageManager from "./dao/mongoManager/MessageManager.js"; // TODO meter la clase en chat.router.js
 import mongoStore from "connect-mongo"
 import "./dao/dbConfig.js";
+import passport from "passport";
+import './passport/PassportStrategies.js'
 
 //Creacion del servidor
 const app = express();
@@ -41,7 +43,10 @@ app.use(
 // Configurar handlebars
 app.engine("handlebars", handlebars.engine()); //solo para handlebars.
 app.set("views", __dirname + "/views"); //Ubicación de carpeta vistas
-app.set("view engine", "handlebars"); //Qué motor de plantilla uso
+app.set("view engine", "handlebars"); //Qué motor de plantilla uso}}
+
+//inicializar passport
+app.use(passport.initialize())
 
 // rutas
 app.use("/api/products", producstRouter); //cdo llamo a ruta /api/products traer los prods en un json

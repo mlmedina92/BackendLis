@@ -14,7 +14,6 @@ router.get('/', async (req, res) => { // si llamo al slash views renderio formua
     } else {
         // si esta logueado ,muestro home
         const prods = await pm.getProducts(req.query)
-        console.log(prods.payload);
         res.render('productsList', { 'prods': prods.payload, 'isAdminRole': req.session.role == 'admin', 'userName': req.session.userName })//cdo estoy en / se va a renderizar el handlebars home
     }
 })
